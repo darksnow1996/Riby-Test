@@ -1,0 +1,16 @@
+html
+    head
+        title Actors
+
+
+    body
+        form(action="/events" method="post")
+            input(type="text", name="etype")
+            select(name="actor")
+                each actor in actors
+                    option(value=actor.id) #{actor.login}
+            select(name="repo")
+                each rep in repos
+                    option(value=rep.id) #{rep.name}
+            input(type="submit" value="Submit")
+

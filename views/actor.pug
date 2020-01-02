@@ -1,0 +1,10 @@
+html
+    head
+        title Actors
+
+
+    body
+        each actor in actors
+            h3 #{actor.login} - #{actor.id}
+                each eve in actor.events
+                        h4 #{eve.type} - #{eve.createdAt}
